@@ -19,6 +19,6 @@ mi punto de vista a la sociedad, ¡¡¡ASÍ QUE TE ENCARGO A TI QUE ESTAS LEYEND
 para compartir tu trabajo con el mundo y mas que solo copiar y pegar el codigo que aquí presentaré seas capáz tu tambien de 
 compartir tu trabajo con el mundo y hacer de la sociedad un lugar mejor!
 
-Sin mas que agregar, muchas gracias y espero que mi trabajo te sea util!!!
+Sin mas que agregar, muchas gracias y espero que mi trabajo te sea util !!!
 
 -Jose Ramiro Fuentes Lara
