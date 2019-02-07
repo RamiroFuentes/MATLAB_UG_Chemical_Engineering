@@ -10,14 +10,20 @@ k = 5;
 x = -2 :pi/1000: 2;
 u = 0;
 
-%% Se evaluan los valores de nuestra sumatoria 
-for n= 1:10000 % A mayor intervalo mas preciso resulta nuestra simulaci?n
+%% Se evaluan los valores de nuestra sumatoria
+for n= 1:10000 % A mayor intervalo mas preciso resulta nuestra simulacion
     u = u + (1/n) * (sin(n*pi/2)) * cos(n*pi*x/2);
-end 
+end
 
 %% Se adicionan los valores constantes y se multiplica la sumatoria por su respectivo coeficiente
 u = u * (2*k/pi) + k/2;
 
 %% Se grafica nuestra funcion
 plot(x,u);
-grid on 
+grid on
+
+set(gcf,'Name','Ecuaciones Diferenciales Parciales')
+    xlabel('Eje X')
+    ylabel('Eje Y')
+    title('Serie de Fourier 02')
+    legend('Funcion')

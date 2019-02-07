@@ -10,14 +10,21 @@ k = 5;
 x = -pi :pi/1000: pi;
 u = 0;
 
-%% Se evaluan los valores de nuestra sumatoria 
+%% Se evaluan los valores de nuestra sumatoria
 for n= 1:1000
     u = u + (1/n) * (1-cos(n*pi)) * sin(n*x);
-end 
+end
 
 %% Se adicionan los valores constantes y se multiplica la sumatoria por su respectivo coeficiente
 u = u * (2*k/pi);
 
 %% Se grafica nuestra funcion
-plot(x,u);
-grid on 
+whitebg('white')
+plot(x,u,'c');
+grid on
+
+set(gcf,'Name','Ecuaciones Diferenciales Parciales')
+    xlabel('Eje X')
+    ylabel('Eje Y')
+    title('Serie de Fourier 01')
+    legend('Funcion')
