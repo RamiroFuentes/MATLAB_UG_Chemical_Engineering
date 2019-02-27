@@ -1,30 +1,29 @@
 % Jose Ramiro Fuentes Lara
 % Ecuaciones Diferenciales parciales
-% Ejercicio 01
+% Ejercicio 02
 clc; clear;
 
 %% Se definen nuestras variables constantes para el problema
 k = 5;
 
 %% Se establece nuestra condicion inicial asi como el intervalo de nuestra serie
-x = -pi :pi/1000: pi;
+x = -2 :pi/1000: 2;
 u = 0;
 
-%% Se evaluan los valores de nuestra sumatoria
-for n= 1:1000
-    u = u + (1/n) * (1-cos(n*pi)) * sin(n*x);
-end
+%% Se evaluan los valores de nuestra sumatoria 
+for n= 1:10000 % A mayor intervalo mas preciso resulta nuestra simulacion
+    u = u + (1/n) * (sin(n*pi/2)) * cos(n*pi*x/2);
+end 
 
 %% Se adicionan los valores constantes y se multiplica la sumatoria por su respectivo coeficiente
-u = u * (2*k/pi);
+u = u * (2*k/pi) + k/2;
 
 %% Se grafica nuestra funcion
-whitebg('white')
-plot(x,u,'c');
-grid on
+plot(x,u);
+grid on 
 
-set(gcf,'Name','Ecuaciones Diferenciales Parciales')
+set(gcf,'Name','Ecuaciones Diferenciales Parciales') 
     xlabel('Eje X')
     ylabel('Eje Y')
-    title('Serie de Fourier 01')
+    title('Serie de Fourier 02')
     legend('Funcion')

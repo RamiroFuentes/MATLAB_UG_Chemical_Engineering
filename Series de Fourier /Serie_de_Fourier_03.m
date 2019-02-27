@@ -12,19 +12,19 @@ a = E/pi;
 t = -pi/W:0.001:pi/W;
 u = 0; % Funciona para inicializar nuestra funcion u()
 
-%% Se evaluan los valores de nuestra sumatoria
+%% Se evaluan los valores de nuestra sumatoria 
 for n= 2:2:10000
     u = u + ( ((2*E)*cos(n*W*t)) / (pi*(1+n)*(1-n)) );
-end
+end 
 
 %% Se adicionan los valores constantes y se multiplica la sumatoria por su respectivo coeficiente
 u = a + E/2*sin(W*t) + u;
 
 %% Se grafica nuestra funcion
 plot(t,u);
-grid on
+grid on 
 
-set(gcf,'Name','Ecuaciones Diferenciales Parciales')
+set(gcf,'Name','Ecuaciones Diferenciales Parciales') 
     xlabel('Eje X')
     ylabel('Eje Y')
     title('Serie de Fourier 03')

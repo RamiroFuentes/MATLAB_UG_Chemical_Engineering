@@ -13,19 +13,19 @@ a = pi;         % Parte constante de nuestra funcion
 x= -pi:.01:pi;  % Intervalo de nuestra funcion periodica
 u = 0;          % Funciona para inicializar nuestra funcion u()
 
-%% Se evaluan los valores de nuestra sumatoria
+%% Se evaluan los valores de nuestra sumatoria 
 for n= 1:1000
     u = u + ( (cos(n*pi)*sin(n*x)) / (n) ) ;
-end
+end 
 
 %% Se adicionan los valores constantes y se multiplica la sumatoria por su respectivo coeficiente
 u = a - 2*u;
 
 %% Se grafica nuestra funcion
 plot(x,u);
-grid on
+grid on 
 
-set(gcf,'Name','Ecuaciones Diferenciales Parciales')
+set(gcf,'Name','Ecuaciones Diferenciales Parciales') 
     xlabel('Eje X')
     ylabel('Eje Y')
     title('Serie de Fourier 04')
