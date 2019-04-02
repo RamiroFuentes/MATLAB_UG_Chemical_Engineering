@@ -4,29 +4,28 @@ clc;clear;close all;
 
 %% valores de nuestras constantes
 
-L = 24;
-x = 0:.5:L;
-y = 0:.5:L;
+a = 20;
+b = 40;
+x = 0:.5:a;
+y = 0:.5:b;
 
 %% Definimos el ciclo para llenar la malla
  for i=1:length(x)
      for j=1:length(y)
-         T(i,j)=0;
-         for n=1:200
-         B=200*sin(((2*n-1)*pi)/2)/((2*n-1)*pi);
-         A=B/cosh(((2*n-1)*pi)/2);
-         
-         T(i,j)=T(i,j) + A*cos(((2*n-1)*pi*x(i))/(2*L))*cosh(((2*n-1)*pi*y(j))/(2*L));
+         u(i,j)=0;
+         for n=1:110
+         An=(440*(1-cos(n*pi)))/((n*pi)*sinh(2*n*pi));
+         u(i,j)=u(i,j) + An*sin(n*pi*x(i)/a)*sinh(n*pi*y(j)/a);
          end
      end
  end
 
 %% Se grafica nuestra funcion y se le da formato
 grid on 
-surf(T)
+surf(u)
 
 set(gcf,'Name','Ecuaciones Diferenciales Parciales') 
     xlabel('Eje X')
     ylabel('Eje Y')
-    title('Ejercicio 02 Tipo Dirichner')
+    title('Ejercicio 01 Ecuacion de Laplace')
     

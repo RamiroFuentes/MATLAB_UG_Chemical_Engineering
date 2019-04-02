@@ -27,5 +27,4 @@ surf(u)
 set(gcf,'Name','Ecuaciones Diferenciales Parciales') 
     xlabel('Eje X')
     ylabel('Eje Y')
-    title('Ejercicio 01 Tipo Dirichner')
-    
+    title('Ejercicio 01 Ecuacion de Laplace')
