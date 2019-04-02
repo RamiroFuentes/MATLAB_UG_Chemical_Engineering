@@ -4,8 +4,8 @@ clc;clear;close all;
 
 %% valores de nuestras constantes
 
-a = 20;
-b = 40;
+a = 24;
+b = 12;
 x = 0:.5:a;
 y = 0:.5:b;
 
@@ -14,8 +14,8 @@ y = 0:.5:b;
      for j=1:length(y)
          u(i,j)=0;
          for n=1:110
-         An=(440*(1-cos(n*pi)))/((n*pi)*sinh(2*n*pi));
-         u(i,j)=u(i,j) + An*sin(n*pi*x(i)/a)*sinh(n*pi*y(j)/a);
+         An= ( 1/(12*sinh(n*pi/2)) ) * ( ((-13824*cos(n*pi))/(n*pi)) + ( (2648*cos(n*pi)-24648)/(n^3*pi^3) ) );
+         u(i,j)= u(i,j) + An*sin(n*pi*x(i)/a)*sinh(n*pi*y(j)/a);
          end
      end
  end
@@ -27,4 +27,4 @@ surf(u)
 set(gcf,'Name','Ecuaciones Diferenciales Parciales') 
     xlabel('Eje X')
     ylabel('Eje Y')
-    title('Ejercicio 01 Ecuacion de Laplace')
+    title('Practica 01 Ecuacion de Laplace')
